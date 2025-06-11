@@ -1,0 +1,144 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Camiseta Básica",
+      "referencia": "CAM-BSC-001",
+      "tamanhos": ["P", "M", "G", "GG"],
+      "cores": ["Branco", "Preto", "Cinza"],
+      "preco": { "original": 49.9, "promocional": 39.9 },
+      "quantidadeMinima": 2,
+      "categoria": "Roupas"
+    },
+    {
+      "id": 2,
+      "nome": "Calça Jeans",
+      "referencia": "CAL-BSC-002",
+      "tamanhos": ["M", "G", "GG"],
+      "cores": ["Azul", "Preto"],
+      "preco": { "original": 99.9, "promocional": 89.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Roupas"
+    },
+    {
+      "id": 3,
+      "nome": "Jaqueta de Couro",
+      "referencia": "JAC-COU-003",
+      "tamanhos": ["M", "G", "GG"],
+      "cores": ["Preto", "Marrom"],
+      "preco": { "original": 199.9, "promocional": 159.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Roupas"
+    },
+    {
+      "id": 4,
+      "nome": "Tênis Esportivo",
+      "referencia": "TEN-ESP-004",
+      "tamanhos": ["38", "39", "40", "41", "42"],
+      "cores": ["Branco", "Preto", "Cinza"],
+      "preco": { "original": 129.9, "promocional": 99.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Calçados"
+    },
+    {
+      "id": 5,
+      "nome": "Bermuda de Surf",
+      "referencia": "BER-SUR-005",
+      "tamanhos": ["M", "G"],
+      "cores": ["Azul", "Verde", "Preto"],
+      "preco": { "original": 59.9, "promocional": 49.9 },
+      "quantidadeMinima": 2,
+      "categoria": "Roupas"
+    },
+    {
+      "id": 6,
+      "nome": "Blusa de Moletom",
+      "referencia": "BLU-MOL-006",
+      "tamanhos": ["P", "M", "G", "GG"],
+      "cores": ["Cinza", "Preto", "Azul"],
+      "preco": { "original": 79.9, "promocional": 69.9 },
+      "quantidadeMinima": 3,
+      "categoria": "Roupas"
+    },
+    {
+      "id": 7,
+      "nome": "Calça Cargo",
+      "referencia": "CAL-CAR-007",
+      "tamanhos": ["M", "G", "GG"],
+      "cores": ["Bege", "Preto"],
+      "preco": { "original": 89.9, "promocional": 69.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Roupas"
+    },
+    {
+      "id": 8,
+      "nome": "Camisa Polo",
+      "referencia": "CAM-POLO-008",
+      "tamanhos": ["P", "M", "G"],
+      "cores": ["Branco", "Azul", "Preto"],
+      "preco": { "original": 59.9, "promocional": 49.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Roupas"
+    },
+    {
+      "id": 9,
+      "nome": "Tênis Casual",
+      "referencia": "TEN-CAS-009",
+      "tamanhos": ["38", "39", "40", "41"],
+      "cores": ["Preto", "Bege", "Cinza"],
+      "preco": { "original": 99.9, "promocional": 79.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Calçados"
+    },
+    {
+      "id": 10,
+      "nome": "Chapéu de Sol",
+      "referencia": "CHA-SOL-010",
+      "tamanhos": ["Único"],
+      "cores": ["Bege", "Marrom"],
+      "preco": { "original": 39.9, "promocional": 29.9 },
+      "quantidadeMinima": 2,
+      "categoria": "Acessórios"
+    },
+    {
+      "id": 11,
+      "nome": "Óculos de Sol",
+      "referencia": "OCU-SOL-011",
+      "tamanhos": ["Único"],
+      "cores": ["Preto", "Dourado"],
+      "preco": { "original": 149.9, "promocional": 119.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Acessórios"
+    },
+    {
+      "id": 12,
+      "nome": "Relógio Masculino",
+      "referencia": "REL-MAS-012",
+      "tamanhos": ["Único"],
+      "cores": ["Preto", "Dourado"],
+      "preco": { "original": 199.9, "promocional": 159.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Acessórios"
+    },
+    {
+      "id": 13,
+      "nome": "Cinto de Couro",
+      "referencia": "CIN-COU-013",
+      "tamanhos": ["P", "M", "G"],
+      "cores": ["Preto", "Marrom"],
+      "preco": { "original": 79.9, "promocional": 69.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Acessórios"
+    },
+    {
+      "id": 14,
+      "nome": "Mochila de Viagem",
+      "referencia": "MOC-VIA-014",
+      "tamanhos": ["Único"],
+      "cores": ["Preto", "Azul", "Verde"],
+      "preco": { "original": 249.9, "promocional": 199.9 },
+      "quantidadeMinima": 1,
+      "categoria": "Acessórios"
+    }
+  ]
+}

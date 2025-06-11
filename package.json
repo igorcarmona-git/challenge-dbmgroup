@@ -1,0 +1,15 @@
+{
+  "name": "teste-dbm",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "1.8",
+    "vanilla-masker": "^1.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  },
+  "scripts": {
+    "build:css": "sass scss/styles.scss:css/styles.css --no-source-map",
+    "watch:css": "sass --watch scss/styles.scss:css/styles.css --no-source-map"
+  }
+}

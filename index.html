@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body ng-app="myApp">
+    <div class="container" ng-controller="ProductCtrl">
+      <h1>Lista de Produtos</h1>
+
+      <!-- Filtro -->
+      <div class="filters">
+        <input
+          type="text"
+          ng-model="filterName"
+          placeholder="Filtrar por nome"
+        />
+        <select ng-model="categoryFilter">
+          <option value="">Selecione uma categoria</option>
+          <option ng-repeat="category in categories" value="{{category}}">
+            {{category}}
+          </option>
+        </select>
+      </div>
+
+      <!-- Lista de Produtos -->
+      <div>
+        <p
+          ng-repeat="product in paginatedProducts | filterName:filterName | categoryFilter:categoryFilter"
+        >
+          Nome: {{product.nome}} - Categoria: {{product.categoria}} - R$
+          {{product.preco.promocional}}
+        </p>
+      </div>
+
+      <!-- Paginação -->
+      <div class="pagination">
+        <button ng-disabled="currentPage === 1" ng-click="changePage('prev')">
+          Anterior
+        </button>
+        <span>Página {{currentPage}} de {{totalPages}}</span>
+        <button
+          ng-disabled="currentPage === totalPages"
+          ng-click="changePage('next')"
+        >
+          Próxima
+        </button>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="js/controllers/products/filterName.js"></script>
+    <script src="js/controllers/products/categoryFilter.js"></script>
+    <script src="js/controllers/products/pagination.js"></script>
+    <script src="js/controllers/products/productCtrl.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+@use "variables";
+
+@mixin button-styles {
+  padding: 12px 24px;
+  background-color: variables.$primary-color;
+  color: white;
+  border: none;
+  border-radius: variables.$border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: variables.$button-hover-color;
+  }
+
+  &:disabled {
+    background-color: variables.$secondary-color;
+    cursor: not-allowed;
+  }
+}
+
+@mixin card-shadow {
+  background-color: variables.$card-background-color;
+  box-shadow: variables.$box-shadow;
+  border-radius: variables.$border-radius;
+  padding: 20px;
+}
