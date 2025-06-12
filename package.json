@@ -16,7 +16,7 @@
   "scripts": {
     "build:css": "sass scss/styles.scss:css/styles.css --no-source-map",
     "watch:css": "sass --watch scss/styles.scss:css/styles.css --no-source-map",
-    "start": "concurrently \"npm run build:css\" \"npm run watch:css\" \"npx json-server --watch db.json --port 8080\" \"nodemon --exec 'http-server -p 3000' --watch ./\""
+    "start": "concurrently \"npm run build:css\" \"npm run watch:css\" \"npx json-server --watch db.json --port 8080\" \"nodemon --exec 'http-server ./ -p 3000' --watch ./\""
   },
   "description": "",
   "main": "index.html",
