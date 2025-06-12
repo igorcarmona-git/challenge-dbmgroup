@@ -2,17 +2,21 @@
 @use "mixins";
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: variables.$background-color;
   margin: 0;
   padding: 0;
   color: variables.$text-color;
+  line-height: 1.6;
 }
 
 .container {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
+  background-color: #fff;
+  border-radius: variables.$border-radius;
+  box-shadow: variables.$box-shadow;
 }
 
 h1 {
@@ -20,38 +24,79 @@ h1 {
   color: variables.$primary-color;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .filters {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: variables.$box-shadow;
+}
 
-  input,
-  select {
-    padding: 12px;
-    margin-right: 10px;
-    border-radius: variables.$border-radius;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    width: 45%;
+.filters input,
+.filters select {
+  padding: 12px;
+  margin-right: 10px;
+  border-radius: variables.$border-radius;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  width: 48%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: variables.$primary-color;
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
   }
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: variables.$primary-color;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: variables.$card-background-color;
-  padding: 15px;
+  padding: 20px;
   margin-bottom: 15px;
   border-radius: variables.$border-radius;
   box-shadow: variables.$box-shadow;
   font-size: 1.1rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .container-products {
+    display: flex;
+    border: 1px solid black;
+    margin-top: 2em;
+  }
+
+  .price {
+    font-weight: bold;
+    color: variables.$primary-color;
+  }
 }
 
 .pagination {
@@ -65,14 +110,22 @@ li {
     margin: 0 10px;
     padding: 10px 20px;
     font-size: 1rem;
+    background-color: variables.$primary-color;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: variables.$button-hover-color;
+    }
 
     &:disabled {
       background-color: #ddd;
+      cursor: not-allowed;
     }
   }
 
   span {
     font-size: 1rem;
+    color: variables.$text-color;
   }
 }
 
@@ -80,11 +133,22 @@ li {
   .filters {
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 
   .filters input,
   .filters select {
     width: 90%;
     margin-bottom: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
   }
 }

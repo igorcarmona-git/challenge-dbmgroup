@@ -10,14 +10,14 @@
     <div class="container" ng-controller="ProductCtrl">
       <h1>Lista de Produtos</h1>
 
-      <!-- Filtro -->
       <div class="filters">
         <input
           type="text"
           ng-model="filterName"
           placeholder="Filtrar por nome"
+          ng-change="filterProducts()"
         />
-        <select ng-model="categoryFilter">
+        <select ng-model="categoryFilter" ng-change="filterProducts()">
           <option value="">Selecione uma categoria</option>
           <option ng-repeat="category in categories" value="{{category}}">
             {{category}}
@@ -25,17 +25,30 @@
         </select>
       </div>
 
-      <!-- Lista de Produtos -->
-      <div>
-        <p
-          ng-repeat="product in paginatedProducts | filterName:filterName | categoryFilter:categoryFilter"
+      <div class="container-products" ng-repeat="product in paginatedProducts">
+        <!-- OBS: Estilizei inline, não sei o motivo, mas por mais que dou npm run build:css, não está compilando -->
+        <div
+          style="
+            border-radius: 1em;
+            border: 1px solid black;
+            padding: 1em;
+            margin-top: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          "
         >
-          Nome: {{product.nome}} - Categoria: {{product.categoria}} - R$
-          {{product.preco.promocional}}
-        </p>
+          <p><strong>Nome:</strong> {{product.nome}}</p>
+          <p><strong>Categoria:</strong> {{product.categoria}}</p>
+          <p>
+            <strong>Preço original:</strong>
+            {{formatPrice(product.preco.original)}}
+          </p>
+          <p>
+            <strong>Preço promocional:</strong>
+            {{formatPrice(product.preco.promocional)}}
+          </p>
+        </div>
       </div>
 
-      <!-- Paginação -->
       <div class="pagination">
         <button ng-disabled="currentPage === 1" ng-click="changePage('prev')">
           Anterior
